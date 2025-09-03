@@ -1,0 +1,74 @@
+   body {
+      background: #fff;
+      color: #000;
+      font-family: 'Space Mono', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .widget {
+      border: 2px solid #000;
+      padding: 2rem;
+      box-shadow: 8px 8px 0 #000;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 2px solid #000;
+      background: #fff;
+      color: #000;
+      font-size: 1rem;
+      box-shadow: 4px 4px 0 #000;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    button:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #000;
+    }
+
+    .result {
+      margin-top: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      animation: pop 0.3s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); }
+    }
+
+    .history {
+      margin-top: 2rem;
+      text-align: left;
+      border-top: 2px solid #000;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .clear-btn {
+      margin-top: 1rem;
+      background: #fff;
+      border: 2px solid #000;
+      box-shadow: 4px 4px 0 #000;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: transform 0.1s ease;
+    }
+
+    .clear-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #000;
+    }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Roller</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="widget">
+    <h2>Dice Roller</h2>
+    <select id="diceType">
+      <option value="20">D20</option>
+      <option value="12">D12</option>
+      <option value="10">D10</option>
+      <option value="8">D8</option>
+      <option value="6">D6</option>
+      <option value="4">D4</option>
+      <option value="100">Percentile (D100)</option>
+    </select>
+    <button onclick="rollDice()">Roll</button>
+    <div class="result" id="result">–</div>
+
+    <div class="history" id="history"></div>
+    <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
+
