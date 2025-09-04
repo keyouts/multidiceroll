@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="widget">
-    <h2>Dice Roller</h2>
-    <select id="diceType">
+  <div class="widget" role="form" aria-labelledby="dice-roller-title">
+    <h2 id="dice-roller-title">Dice Roller</h2>
+
+    <label for="diceType" class="visually-hidden">Select Dice Type</label>
+    <select id="diceType" aria-label="Select dice type">
       <option value="20">D20</option>
       <option value="12">D12</option>
       <option value="10">D10</option>
@@ -17,13 +19,19 @@
       <option value="4">D4</option>
       <option value="100">Percentile (D100)</option>
     </select>
-    <button onclick="rollDice()">Roll</button>
-    <div class="result" id="result">–</div>
 
-    <div class="history" id="history"></div>
-    <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+    <button onclick="rollDice()" aria-label="Roll the selected dice">Roll</button>
+
+    <div class="result" id="result" role="status" aria-live="polite" aria-label="Dice roll result">–</div>
+
+    <div class="history" id="history" role="region" aria-label="Roll history"></div>
+
+    <button class="clear-btn" onclick="clearHistory()" aria-label="Clear roll history">Clear History</button>
   </div>
+
   <script src="./script.js"></script>
 </body>
 </html>
+
+
 
